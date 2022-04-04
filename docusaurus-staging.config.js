@@ -188,12 +188,6 @@ module.exports = {
             '/conversation-api/api-reference/update-members',
             '/conversation-api/overview/update-members'
           ]
-        }, {
-          to: '/pre-built-ui/summary-ui/',
-          'from': [
-            '/pre-built-ui/video-summary-ui',
-            '/pre-built-ui/text-summary-ui'
-          ]
         }]
       }
     ]
@@ -237,7 +231,7 @@ module.exports = {
 
     colorMode:
     {
-      defaultMode: 'light',
+      defaultMode: 'dark',
       disableSwitch: false,
       respectPrefersColorScheme: true
     },
@@ -265,30 +259,35 @@ module.exports = {
           label: "API Reference",
           to: '/api-reference/getting-started/',
           position: "left",
+          activeBaseRegex: "docs/(api-reference|async-api/(overview|introduction|reference)|streamingapi/introduction|streaming-api/api-reference|subscribe-api|telephony/introduction|telephony-api|conversation-api/api-reference|management-api|developer-tools/(authentication|error|postman|sample-apps))",
         }, 
         {
           label: "SDKs",
-          href: '/sdk-intro/',
+          to: '/sdk-intro/',
           position: "left",
+          activeBaseRegex: "docs/(javascript-sdk|python-sdk|sdk-intro)"
         },
         {
           label: "Tutorials",
-          href: '/tutorials/',
+          to: '/tutorials/',
           position: "left",
+          activeBaseRegex: "docs/(tutorials|streamingapi/(code-snippets|tutorials)|async-api/(code-snippets|tutorials)|telephony/(code-snippets|tutorials)|best-practices/best-practices-trackers)|pre-built-ui/(tuning-summary-page|custom-domain|user-engagement-analytics|supported-tracking-events)|concepts/(websockets|pstn-and-sip)"
         },            
         {
           label: "Integrations",
-          href: '/integrations/integrations-intro/',
+          to: '/integrations/integrations-intro/',
           position: "left",
+          activeBaseRegex: 'docs/integrations'
         },
         {
           label: "Labs",
-          href: '/labs/',
+          to: '/labs/',
           position: "left",
+          activeBaseRegex: "docs/(labs|conversation-api/comprehensive-action-items|concepts/redaction-pii|guides/abstract-topics-labs)"
         },
         {
           label: "Support",
-          href: '/support/',
+          to: '/support/',
           position: "left",
         },
         {
@@ -298,13 +297,13 @@ module.exports = {
         },
         {
           label: 'Free Sign Up',
-          to: 'https://platform.symbl.ai/#/signup',
+          href: 'https://platform.symbl.ai/#/signup',
           position: "right",
         },
         {
           label: "🆕Changelog",
           ImageData: "/img/tick-mark.png",
-          href: '/changelog',
+          to: '/changelog/',
           position: "right",
         },
       ],

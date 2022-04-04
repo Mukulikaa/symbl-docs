@@ -400,7 +400,7 @@ id: 'developer-tools/postman',
   items: [
     'streamingapi/code-snippets/start-and-stop-streaming-api-connection',
     'streamingapi/tutorials/get-real-time-transcription',
-    'javascript-sdk/tutorials/push-audio-get-real-time-data',
+    'streamingapi/tutorials/get-real-time-data',
     'streamingapi/tutorials/get-real-time-sentiment-analysis',
     'streamingapi/code-snippets/detect-key-phrases',
     'streamingapi/code-snippets/receive-live-captioning',
@@ -512,11 +512,17 @@ id: 'developer-tools/postman',
    "telephony/concepts/concepts",
   ],
 },
-// this is a duplicate as the code is buggy
+// this is a duplicate code because the code is buggy
 {
-type: "doc",
-id: "faq"
+  label: 'Concepts',
+  type: 'category',
+  collapsed: true,
+  items: [
+    "streamingapi/concepts",
+   "telephony/concepts/concepts",
+  ],
 },
+
 ],
 
 // Integrations Tab
@@ -658,10 +664,10 @@ SDKsidebar: [{
       },
     ]
   },
- {
-  type: 'doc',
-  id: 'developer-tools/postman',
- },
+  {
+    type: 'doc',
+    id: 'python-sdk/python-sdk-reference', // added because of buggy code
+  },
  ],
 
 
@@ -676,7 +682,6 @@ LabsSidebar: [{
   type: 'category',
   collapsed: true,
   items: [
-    'conversation-api/concepts/comprehensive-action-items',
     'conversation-api/api-reference/comprehensive-action-items',
     ],
  },
@@ -693,7 +698,7 @@ LabsSidebar: [{
   type: 'category',
   collapsed: true,
   items: [
-    'guides/abstract-topics',
+    'labs/abstract-topics-labs',
   ],
  },
   
@@ -719,6 +724,14 @@ Communitysidebar: [{
 ChangelogSidebar: [{
   id: "changelog",
   type: "doc",
+},
+{
+  type: 'doc',
+  id: 'changelog',
+  customProps: {
+    hash: '#14-march-2022',
+    label: '14 March 2022',
+  }
 },
 {
   type: 'doc',
